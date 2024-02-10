@@ -28,3 +28,6 @@ The Whale Talk Translator is a simple, fun application designed to translate any
 Given the input text "turpentine and turtles", the app translates it to "UUUUEEIEEAUEE", mimicking the long, drawn-out sounds of whale communication.
 
 Enjoy translating phrases into Whale Talk and have fun with this simple application!
+
+
+Now uploaded to github pages!
