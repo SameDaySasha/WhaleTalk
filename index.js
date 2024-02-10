@@ -16,7 +16,7 @@ for (let i = 0; i < input.length; i++){
     }
   }
 }
-
+console.log("The result array is: " + resultArray)
 
 console.log(resultArray)
 let resultString = resultArray.join('').toUpperCase()
