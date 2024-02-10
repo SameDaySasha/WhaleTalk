@@ -1,24 +1,53 @@
-let input = 'turpentine and turtles';
+// the text input
+const inputBox = document.querySelector('input');
 
-const vowels = ['a','e','i','o','u']
+// the translate button
+const translateButton = document.querySelector('button');
 
-let resultArray = [];
+// when the button is clicked, we want to run the translation
+translateButton.onclick = translate;
 
-for (let i = 0; i < input.length; i++){
-  console.log(input[i])
-  if(input[i] === 'e' || input[i] === 'u'){
-    resultArray.push(input[i])
+// the output display
+const outputBox = document.querySelector('#output')
+
+
+// Takes the value of the input as text, and returns a string
+function translate() {
+  // turn the input into all lowercase to match the vowels below
+  let input = inputBox.value.toLowerCase();
+
+  // if the user did not enter anything, we have nothing to translate
+  if(input === '') {
+    // let the user know, and return so the rest of the function does not run
+    return window.alert('Please enter some text to translate.')
   }
-  for(let j= 0; j < vowels.length; j++){
-    if(input[i] === vowels[j]){
-      resultArray.push(input[i])
-      console.log(resultArray)
+
+  const vowels = ['a','e','i','o','u']
+
+  let resultArray = [];
+
+  for (let i = 0; i < input.length; i++){
+    currentCharacter = input[i];
+
+    if(currentCharacter === 'e' || currentCharacter === 'u'){
+      resultArray.push(currentCharacter);
+    }
+
+    for(let j = 0; j < vowels.length; j++){
+      currentVowel = vowels[j];
+
+      if(currentCharacter === currentVowel){
+        resultArray.push(currentCharacter);
+      }
     }
   }
+
+  // turn the array into one capitalized string
+  let resultString = resultArray.join('').toUpperCase();
+
+  // clear the input box
+  inputBox.value = '';
+
+  // change the text inside the output display to the result
+  outputBox.innerHTML = resultString;
 }
-console.log("The result array is: " + resultArray)
-
-console.log(resultArray)
-let resultString = resultArray.join('').toUpperCase()
-
-document.write(resultString)

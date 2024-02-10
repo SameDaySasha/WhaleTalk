@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.px-4 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.py-4 {
+    padding-left: 4px;
+    padding-right: 4px;
+}
